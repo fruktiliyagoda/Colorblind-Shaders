@@ -1,0 +1,7 @@
+option.COLORBLIND_TYPE = Type of color blindness
+option.COLORBLIND_STRENGTH = Strength
+
+value.COLORBLIND_TYPE.0 = Protanopia
+value.COLORBLIND_TYPE.1 = Deuteranopia
+value.COLORBLIND_TYPE.2 = Tritanopia
+value.COLORBLIND_TYPE.3 = Achromatopsia

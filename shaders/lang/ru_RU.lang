@@ -1,0 +1,7 @@
+option.COLORBLIND_TYPE = Тип дальтонизма
+option.COLORBLIND_STRENGTH = Сила
+
+value.COLORBLIND_TYPE.0 = Протанопия
+value.COLORBLIND_TYPE.1 = Дейтеранопия
+value.COLORBLIND_TYPE.2 = Тританопия
+value.COLORBLIND_TYPE.3 = Ахроматопсия

@@ -1,0 +1,32 @@
+# .github/workflows/release.yml
+
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Archive repository
+        run: |
+          git archive --format=zip HEAD -o "Colorblind-Shaders-${{ github.ref_name }}.zip"
+
+      - name: Create Github Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: Colorblind-Shaders-${{ github.ref_name }}.zip
+          generate_release_notes: true
+          draft: false
+          prerelease: false
