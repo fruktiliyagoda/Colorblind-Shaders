@@ -1,5 +1,7 @@
 #ifdef FSH
 
+#include "/lib/color/blindness/common.glsl"
+
 uniform sampler2D colortex0;
 
 in vec2 texcoord;
@@ -7,43 +9,18 @@ in vec2 texcoord;
 /* RENDERTARGETS: 0 */
 layout(location = 0) out vec4 color;
 
-float strength = float(COLORBLIND_STRENGTH);
-
-#if COLORBLIND_TYPE == 0
-#include "/lib/protan/protan.glsl"
-
 void main() {
   color = texture(colortex0, texcoord);
-  color.rgb = correctProtan(color, strength);
+
+  float SP = float(PROTANOMALY_STRENGTH);
+  float SD = float(DEUTANOMALY_STRENGTH);
+  float ST = float(TRITANOMALY_STRENGTH);
+
+  mat3 complexRGB = calculateMatrix(float[](SP, SD, ST));
+
+  color.rgb = complexRGB * color.rgb;
 }
-#endif
 
-#if COLORBLIND_TYPE == 1
-#include "/lib/deutan/deutan.glsl"
-
-void main() {
-  color = texture(colortex0, texcoord);
-  color.rgb = correctDeutan(color, strength);
-}
-#endif
-
-#if COLORBLIND_TYPE == 2
-#include "/lib/tritan/tritan.glsl"
-
-void main() {
-  color = texture(colortex0, texcoord);
-  color.rgb = correctTritan(color, strength);
-}
-#endif
-
-#if COLORBLIND_TYPE == 3
-#include "/lib/achromat/achromat.glsl"
-
-void main() {
-  color = texture(colortex0, texcoord);
-  color.rgb = correctAchromat(color, strength);
-}
-#endif
 #endif
 
 #ifdef VSH

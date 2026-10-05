@@ -12,7 +12,6 @@ Colorblind Shaders provides configurable color vision deficiency simulation with
 * Adjustable simulation strength from 0 to 10
 * Real-time configuration through the Iris shader settings
 * Lightweight post-processing effect
-* Open-source
 * Designed for use with Iris
 
 ## Supported Types
@@ -24,26 +23,18 @@ Currently supported:
 | **Protanopia** | Reduced or absent sensitivity to long-wavelength (L) cone responses |
 | **Deuteranopia** | Reduced or absent sensitivity to medium-wavelength (M) cone responses |
 | **Tritanopia** | Reduced or absent sensitivity to short-wavelength (S) cone responses |
-| **Achromatopsia** | Simulation of complete loss of color vision |
 
-The current version treats these as separate simulation modes. Combined or mixed color vision deficiencies are planned for a future version.
+The models can be combined with different severities.
 
 ## Configuration
 
-The shaderpack provides two settings:
+There is 3 parameters for every vision anomaly type:
 
-### Color Vision Deficiency Type
+* Protanomaly
+* Deuteranomaly
+* Tritanomaly
 
-Select the type of color vision deficiency to simulate:
-
-* Protanopia
-* Deuteranopia
-* Tritanopia
-* Achromatopsia
-
-### Strength
-
-Controls the intensity of the simulation from **0 to 10**.
+Every of theese parameters has values from **0 to 10**.
 
 * `0` — no simulation
 * `10` — maximum simulation strength
@@ -53,7 +44,7 @@ Intermediate values can be used to simulate less severe color vision deficiencie
 ## Installation
 
 1. Install [Iris Shaders](https://modrinth.com/mod/iris).
-2. Download the latest release of **Colorblind Shaders**.
+2. Download the latest release of **Colorblind Shaders** form [Modrinth](https://modrinth.com/shader/colorblindness-shaders).
 3. Place the shaderpack `.zip` file into your Minecraft `shaderpacks` folder.
 4. Launch Minecraft with Iris.
 5. Open **Video Settings → Shader Packs**.
@@ -117,3 +108,7 @@ See [`LICENSE`](LICENSE) for the license under which this project is distributed
 Built for Minecraft using [Iris Shaders](https://irisshaders.dev/).
 
 The color vision deficiency models used by this project are based on published scientific sources, which will be documented alongside the corresponding implementations.
+
+## Issues
+
+There is some issues with `P` + `D` combining. If you know, how to fix it, or just know something about colorblindness, welcome to my [`Discord`](https://discord.gg/RfVHpFWsrZ) or [`Github Issues`](https://github.com/fruktiliyagoda/Colorblind-Shaders/issues) to share your solutions.

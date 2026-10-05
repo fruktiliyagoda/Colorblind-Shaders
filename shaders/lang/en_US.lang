@@ -1,7 +1,11 @@
-option.COLORBLIND_TYPE = Type of color blindness
-option.COLORBLIND_STRENGTH = Strength
+option.PROTANOMALY_STRENGTH = Protanomaly
+option.DEUTANOMALY_STRENGTH = Deuteranomaly
+option.TRITANOMALY_STRENGTH = Tritanomaly
 
-value.COLORBLIND_TYPE.0 = Protanopia
-value.COLORBLIND_TYPE.1 = Deuteranopia
-value.COLORBLIND_TYPE.2 = Tritanopia
-value.COLORBLIND_TYPE.3 = Achromatopsia
+value.PROTANOMALY_STRENGTH.0 = Normal
+value.DEUTANOMALY_STRENGTH.0 = Normal
+value.TRITANOMALY_STRENGTH.0 = Normal
+
+value.PROTANOMALY_STRENGTH.10 = Protanopia
+value.DEUTANOMALY_STRENGTH.10 = Deuteranopia
+value.TRITANOMALY_STRENGTH.10 = Tritanopia

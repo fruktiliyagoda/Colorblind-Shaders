@@ -1,7 +1,11 @@
-option.COLORBLIND_TYPE = Тип дальтонизма
-option.COLORBLIND_STRENGTH = Сила
+option.PROTANOMALY_STRENGTH = Протаномалия
+option.DEUTANOMALY_STRENGTH = Дейтераномалия
+option.TRITANOMALY_STRENGTH = Тританомалия
 
-value.COLORBLIND_TYPE.0 = Протанопия
-value.COLORBLIND_TYPE.1 = Дейтеранопия
-value.COLORBLIND_TYPE.2 = Тританопия
-value.COLORBLIND_TYPE.3 = Ахроматопсия
+value.PROTANOMALY_STRENGTH.0 = Нормально
+value.DEUTANOMALY_STRENGTH.0 = Нормально
+value.TRITANOMALY_STRENGTH.0 = Нормально
+
+value.PROTANOMALY_STRENGTH.10 = Протанопия
+value.DEUTANOMALY_STRENGTH.10 = Дейтеранопия
+value.TRITANOMALY_STRENGTH.10 = Тританопия
